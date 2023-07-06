@@ -10,12 +10,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     ProdutosComponent,
-    ClientesComponent,
+    ClientesComponent,  
   ],
   imports: [
     BrowserModule,
