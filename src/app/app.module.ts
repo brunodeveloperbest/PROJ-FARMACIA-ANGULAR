@@ -9,6 +9,10 @@ import { ClientesComponent } from './Pages/clientes/clientes.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -16,16 +20,26 @@ import { MatIconModule } from '@angular/material/icon';
     AppComponent,
     LoginComponent,
     ProdutosComponent,
-    ClientesComponent,  
+    ClientesComponent,
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatToolbarModule,
     BrowserAnimationsModule,
     MatIconModule,
+    MatInputModule,
+    MatFormFieldModule,
+    FormsModule,    
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
+
+
+ 
+
