@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.buttonsbar {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    
+}
+.buttonsrouter {
+    .btn {
+        margin-left: 10px;
+        background-color: rgb(76, 135, 212);
+        border-radius: 3%;
+        color: rgb(10, 10, 10);
+        border-color: rgb(251, 253, 253);
+        font-size: medium;
+        font-style: oblique;
+        padding: auto;
+    }
+}
+.barraname {
+    font-style: oblique;
+    font-size: x-large;
+    color: rgb(76, 135, 212);
+    flex: auto;
+}
