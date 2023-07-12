@@ -3,13 +3,11 @@
 html,
 body {
     height: 100%;
-}
-
-body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
-    background-color: darkslategrey;
+    background-color: rgb(238,130,238);
     color: white;
+    
 }
 
 .buttonsbar {
@@ -18,11 +16,9 @@ body {
     height: 100%;
     background-color: darkslategrey;
     color: white;
-
 }
 
 .buttonsrouter {
-    padding: auto;
     .btn {
         margin-left: 10px;
         background-color: darkslategrey;
@@ -42,5 +38,7 @@ body {
     flex: auto;
     
 }
+
+
 
 

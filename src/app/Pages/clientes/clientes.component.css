@@ -1,0 +1,42 @@
+.titulo{
+    justify-content: center;
+    text-align: center;
+}
+.box{
+    text-align: center;
+    justify-items: center;
+    flex: auto;
+    width: 450px;
+    background: rgb(255,0,255);
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border-top-width: 3px;
+    border-top-style: groove;
+    border-top-color: #fffefe;
+
+    border-right-width: 3px;
+    border-right-style: groove;
+    border-right-color: #fffefe;
+
+    border-bottom-width: 3px;
+    border-bottom-style: groove;
+    border-bottom-color: #fffefe;
+
+    border-left-width: 3px;
+    border-left-style: groove   ;
+    border-left-color: #fffefe;
+
+    border-radius: 3%;
+}
+.exlabel{
+    color: white;
+    align-items: center;
+    
+}
+.divnome{
+    color: white;
+}
+#labelnome{
+  color: white;
+}       
