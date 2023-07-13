@@ -44,9 +44,48 @@
     
     <div class="sexo">
         <p>Sexo:</p>
-        <mat-radio-group aria-label="Select an option" class="centralizar">
+        <mat-radio-group aria-label="Select an option">
             <mat-radio-button value="1">Masculino</mat-radio-button>
             <mat-radio-button value="2">Feminino</mat-radio-button>
         </mat-radio-group>
     </div>
+ 
+        <p>
+          <mat-form-field class="example-full-width">
+            <mat-label>Endereço</mat-label>
+            <textarea matInput placeholder=""></textarea>
+          </mat-form-field>
+        </p>
+      
+        <div>
+            <table class="example-full-width" cellspacing="0"><tr>
+              <td><mat-form-field class="example-full-width">
+                <mat-label>Cidade</mat-label>
+                <input matInput placeholder=>
+              </mat-form-field></td>
+              <td><mat-form-field class="example-full-width">
+                <mat-label>Estado</mat-label>
+                <input matInput placeholder="">
+              </mat-form-field></td>
+              <td><mat-form-field class="example-full-width">
+                <mat-label>Cep</mat-label>
+                <input matInput #postalCode maxlength="5" placeholder="" value="">
+              </mat-form-field></td>
+            </tr></table>
+        </div>
+
+        <div>
+            <form class="example-form">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Telefone</mat-label>
+                  <span matPrefix> &nbsp;</span>
+                  <input type="tel" matInput placeholder="ex.(prefixo)123456789">
+                  <mat-icon matSuffix>mode_edit</mat-icon>
+                </mat-form-field>
+              </form>
+        </div>
+       
+    <button mat-raised-button>Cadastrar</button>
+    
+             
 </div>

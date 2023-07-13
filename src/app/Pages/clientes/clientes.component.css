@@ -17,7 +17,7 @@
 
     border-right-width: 3px;
     border-right-style: groove;
-    border-right-color: #fffefe;
+    border-color: #fffefe;
 
     border-bottom-width: 3px;
     border-bottom-style: groove;
@@ -39,4 +39,16 @@
 }
 #labelnome{
   color: white;
-}       
+}     
+.example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+  } 
+  .example-h2 {
+    margin: 10px;
+  }
+  .example-margin {
+    margin: 0 10px;
+  }   

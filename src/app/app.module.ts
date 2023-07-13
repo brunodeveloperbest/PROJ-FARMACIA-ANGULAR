@@ -17,9 +17,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatRadioModule } from '@angular/material/radio';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-
-
-
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -42,7 +40,9 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatSelectModule,
     MatNativeDateModule,
     MatRadioModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatCardModule,
+
 
 
 
