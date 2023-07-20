@@ -1,54 +1,64 @@
-.titulo{
-    justify-content: center;
-    text-align: center;
+.titulo {
+  justify-content: center;
+  text-align: center;
 }
-.box{
-    text-align: center;
-    justify-items: center;
-    flex: auto;
-    width: 450px;
-    background: rgb(255,0,255);
-    color: white;
-    padding: 10px;
-    margin: 10px;
-    border-top-width: 3px;
-    border-top-style: groove;
-    border-top-color: #fffefe;
 
-    border-right-width: 3px;
-    border-right-style: groove;
-    border-color: #fffefe;
+.box {
+  
+  width: 650px;
+  /* background: rgb(255, 0, 255); */
+  /* color: white; */
+  display: flex;flex-direction: column;align-items: center;
+  text-align: center;
+  border-top-width: 3px;
+  border-top-style: groove;
+  border-top-color: #fffefe;
 
-    border-bottom-width: 3px;
-    border-bottom-style: groove;
-    border-bottom-color: #fffefe;
+  border-right-width: 3px;
+  border-right-style: groove;
+  border-color: #fffefe;
 
-    border-left-width: 3px;
-    border-left-style: groove   ;
-    border-left-color: #fffefe;
+  border-bottom-width: 3px;
+  border-bottom-style: groove;
+  border-bottom-color: #fffefe;
 
-    border-radius: 3%;
+  border-left-width: 3px;
+  border-left-style: groove;
+  border-left-color: #fffefe;
+
+  border-radius: 3%;
 }
-.exlabel{
-    color: white;
-    align-items: center;
-    
-}
-.divnome{
-    color: white;
-}
-#labelnome{
+
+
+.divnome {
   color: white;
-}     
-.example-section {
-    display: flex;
-    align-content: center;
-    align-items: center;
-    height: 60px;
-  } 
-  .example-h2 {
-    margin: 10px;
+}
+
+#labelnome {
+  color: white;
+}
+
+.example-h2 {
+  margin: 10px;
+}
+
+.example-margin {
+  margin: 0 10px;
+}
+
+table {
+  width: 100%;
+}
+
+
+  .unico{
+    width: 100%;
   }
-  .example-margin {
-    margin: 0 10px;
-  }   
+
+  .data{
+    width: 300px;
+  }
+
+  .localidade{
+    width: 166px;
+  }

@@ -1,91 +1,158 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <mat-toolbar>
-    <span class="barraname">CLIENTES</span>
-    <div class="buttonsrouter">
-        <button class="btn" type="button" routerLink="/login">Login</button>
-        <button class="btn" type="button" routerLink="/produtos">Produtos</button>
-    </div>
+  <span class="barraname">CLIENTES</span>
+  <div class="buttonsrouter">
+    <button class="btn" type="button" routerLink="/login">Login</button>
+    <button class="btn" type="button" routerLink="/produtos">Produtos</button>
+  </div>
 </mat-toolbar>
 
-<div class="box">
-    <h1 class="titulo">CADASTRO</h1>
-    
-    <div class="divnome">
-        <mat-form-field>
-            <mat-label class="exlabel">Nome</mat-label>
-            <input matInput>
-        </mat-form-field>
-    </div>
-    
-    <div>
-        <mat-form-field class="divsobre">
-            <mat-label class="exlabel">Sobrenome</mat-label>
-            <input matInput>
-        </mat-form-field>
-    </div>
-    
-    <div class="cpf">
-        <mat-form-field>
-            <span matPrefix> &nbsp;</span>
-            <mat-label class="exlabel">CPF</mat-label>
-            <input type="number" matInput placeholder="000.000.000-00">
-            <mat-icon matSuffix>mode_edit</mat-icon>
-        </mat-form-field>
-    </div>
-    
-    <div class="datanasc">
-        <mat-form-field>
-            <mat-label class="exlabel">Data de Nascimento</mat-label>
-            <input class="exlabel" matInput placeholder="  /  /    " [matDatepicker]="picker">
-            <mat-hint class="exlabel">DD/MM/AAAA</mat-hint>
-            <mat-datepicker-toggle matIconSuffix [for]="picker" class="exlabel"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
-        </mat-form-field>
-    </div>
-    
-    <div class="sexo">
-        <p>Sexo:</p>
-        <mat-radio-group aria-label="Select an option">
-            <mat-radio-button value="1">Masculino</mat-radio-button>
-            <mat-radio-button value="2">Feminino</mat-radio-button>
-        </mat-radio-group>
-    </div>
- 
-        <p>
-          <mat-form-field class="example-full-width">
-            <mat-label>Endereço</mat-label>
-            <textarea matInput placeholder=""></textarea>
+<div style="display: flex;flex-direction: column;align-items: center;">
+  <div class="box">
+
+    <div [formGroup]="formularioCompleto">
+      <h1 class="">CADASTRO</h1>
+
+
+      <div class="row">
+        <div class="col-md-12">
+          <mat-form-field class="unico" appearance="outline"  fxLayout="column" >
+            <mat-label class="">Nome</mat-label>
+            <input fxLayout= "row" matInput formControlName="nome">
           </mat-form-field>
-        </p>
-      
-        <div>
-            <table class="example-full-width" cellspacing="0"><tr>
-              <td><mat-form-field class="example-full-width">
-                <mat-label>Cidade</mat-label>
-                <input matInput placeholder=>
-              </mat-form-field></td>
-              <td><mat-form-field class="example-full-width">
-                <mat-label>Estado</mat-label>
-                <input matInput placeholder="">
-              </mat-form-field></td>
-              <td><mat-form-field class="example-full-width">
-                <mat-label>Cep</mat-label>
-                <input matInput #postalCode maxlength="5" placeholder="" value="">
-              </mat-form-field></td>
-            </tr></table>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-6">
+          <mat-form-field appearance="outline">
+            <span matPrefix> &nbsp;</span>
+            <mat-label class="">CPF</mat-label>
+            <input formControlName="cpf" type="number" matInput placeholder="000.000.000-00">
+          </mat-form-field>
+
+        </div>
+        <div class="col-md-6">
+
+          <mat-form-field appearance="outline">
+            <mat-label>Sexo</mat-label>
+            <mat-select disableRipple>
+              <mat-option value="1">Masculino</mat-option>
+              <mat-option value="2">Feminino</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row" >
+        <div class="col-md-6">
+          <mat-form-field appearance="outline">
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker" >
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6">
+          <mat-checkbox formControlName="pcd">Pcd</mat-checkbox>
         </div>
 
-        <div>
-            <form class="example-form">
-                <mat-form-field class="example-full-width">
-                  <mat-label>Telefone</mat-label>
-                  <span matPrefix> &nbsp;</span>
-                  <input type="tel" matInput placeholder="ex.(prefixo)123456789">
-                  <mat-icon matSuffix>mode_edit</mat-icon>
-                </mat-form-field>
-              </form>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <mat-form-field class="example-full-width unico" appearance="outline">
+            <mat-label>Endereço</mat-label>
+            <input matInput placeholder=>
+          </mat-form-field>
         </div>
-       
-    <button mat-raised-button>Cadastrar</button>
-    
-             
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Cidade</mat-label>
+            <input matInput placeholder=>
+          </mat-form-field>
+
+        </div>
+        <div class="col-md-6">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Estado</mat-label>
+            <input matInput placeholder="">
+          </mat-form-field>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-md-6">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Cep</mat-label>
+            <input matInput #postalCode maxlength="5" placeholder="" value="">
+          </mat-form-field>
+        </div>
+        <div class="col-md-6">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Telefone</mat-label>
+            <input type="tel" matInput placeholder="ex.(prefixo)123456789">
+          </mat-form-field>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <mat-form-field class="example-full-width unico" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput placeholder="Ex. pat@example.com">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <button mat-raised-button>Cadastrar</button>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="weight">
+      <th mat-header-cell *matHeaderCellDef> Weight </th>
+      <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="symbol">
+      <th mat-header-cell *matHeaderCellDef> Symbol </th>
+      <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of periodic elements">
+  </mat-paginator>
 </div>
